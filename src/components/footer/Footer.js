@@ -5,7 +5,7 @@ import twitter from "./../../img/icons/twitter.svg";
 import linkedIn from "./../../img/icons/linkedIn.svg";
 import instagram from "./../../img/icons/instagram.svg";
 import gitHub from "./../../img/icons/gitHub.svg";
-import gitHub_black from "./../../img/icons/gitHub-black.svg";
+// import gitHub_black from "./../../img/icons/gitHub-black.svg";
 
 function Footer() {
     return (
