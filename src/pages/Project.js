@@ -1,4 +1,4 @@
-import BtnGitHub from "../btnGitHub/BtnGitHub";
+import BtnGitHub from "../components/btnGitHub/BtnGitHub";
 import img from "./../img/projects/01-big.jpg";
 
 const Project = () => {
