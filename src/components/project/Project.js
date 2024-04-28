@@ -3,7 +3,7 @@ import "./style.css";
 
 const Project = (props) => {
     return (
-        <NavLink to={`/project/${index}`}>
+        <NavLink to={`/project/${props.index}`}>
             <li className="project">
                 <a href="./project-page.html">
                     <img
