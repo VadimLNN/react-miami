@@ -1,10 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const defaultState = {
+    cash: 0,
+};
+
+const cashReduser = (state = defaultState, action) => {
+    switch (action.type) {
+        case "ADD_CASH":
+            return { ...state, cash: state.cash + action.payload };
+        case "GET_CASH":
+            return { ...state, cash: state.cash - action.payload };
+        default:
+            return state;
+    }
+};
+
+const store = createStore(cashReduser);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Provider store={store}>
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    </Provider>
 );
