@@ -11,6 +11,11 @@ import Project from "./pages/Project";
 
 import ScrollToTop from "./utils/scrollToTop";
 import { useDispatch, useSelector } from "react-redux";
+import {
+    addCustomerAction,
+    remuveCustomerAction,
+} from "./store/customerReduser";
+import { addCashAction, getCashAction } from "./store/cashReduser";
 
 function App() {
     const dispatch = useDispatch();
@@ -18,10 +23,10 @@ function App() {
     const customers = useSelector((state) => state.customers.customers);
 
     const addCash = (cash) => {
-        dispatch({ type: "ADD_CASH", payload: cash });
+        dispatch(addCashAction(cash));
     };
     const getCash = (cash) => {
-        dispatch({ type: "GET_CASH", payload: cash });
+        dispatch(getCashAction(cash));
     };
 
     const addCastomer = (name) => {
@@ -29,10 +34,10 @@ function App() {
             name,
             id: Date.now(),
         };
-        dispatch({ type: "ADD_CUSTOMER", payload: customer });
+        dispatch(addCustomerAction(customer));
     };
     const remuveCustomer = (customer) => {
-        dispatch({ type: "REMUVE_CUSTOMER", payload: customer.id });
+        dispatch(remuveCustomerAction(customer.id));
     };
 
     return (

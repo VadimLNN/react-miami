@@ -23,3 +23,9 @@ export const customerReduser = (state = defaultState, action) => {
             return state;
     }
 };
+
+export const addCustomerAction = (payload) => ({ type: ADD_CUSTOMER, payload });
+export const remuveCustomerAction = (payload) => ({
+    type: REMUVE_CUSTOMER,
+    payload,
+});
