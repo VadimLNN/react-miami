@@ -15,12 +15,24 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
     const dispatch = useDispatch();
     const cash = useSelector((state) => state.cash.cash);
+    const customers = useSelector((state) => state.customers.customers);
 
     const addCash = (cash) => {
         dispatch({ type: "ADD_CASH", payload: cash });
     };
     const getCash = (cash) => {
         dispatch({ type: "GET_CASH", payload: cash });
+    };
+
+    const addCastomer = (name) => {
+        const customer = {
+            name,
+            id: Date.now(),
+        };
+        dispatch({ type: "ADD_CUSTOMER", payload: customer });
+    };
+    const remuveCustomer = (customer) => {
+        dispatch({ type: "REMUVE_CUSTOMER", payload: customer.id });
     };
 
     return (
@@ -40,12 +52,7 @@ function App() {
                     </div>
                     <div style={{ display: "flex" }}>
                         <button
-                            style={{
-                                padding: "1rem",
-                                margin: "1rem",
-                                borderRadius: 5,
-                                background: "#5c62ec",
-                            }}
+                            className="btn"
                             onClick={() => {
                                 addCash(Number(prompt()));
                             }}
@@ -55,12 +62,7 @@ function App() {
                             </div>
                         </button>
                         <button
-                            style={{
-                                padding: "1rem",
-                                margin: "1rem",
-                                borderRadius: 5,
-                                background: "#5c62ec",
-                            }}
+                            className="btn"
                             onClick={() => {
                                 getCash(prompt());
                             }}
@@ -69,6 +71,40 @@ function App() {
                                 Снять со счёта
                             </div>
                         </button>
+
+                        <button
+                            className="btn"
+                            onClick={() => {
+                                addCastomer(prompt());
+                            }}
+                        >
+                            <div style={{ color: "#ffffff" }}>
+                                Добавить клиента
+                            </div>
+                        </button>
+
+                        <div>
+                            {customers.length > 0 ? (
+                                <div>
+                                    {customers.map((customer) => (
+                                        <div
+                                            style={{
+                                                border: "2px solid black",
+                                                padding: "4px",
+                                                borderRadius: 5,
+                                            }}
+                                            onClick={() =>
+                                                remuveCustomer(customer)
+                                            }
+                                        >
+                                            {customer.name}
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div>Клиентов нет</div>
+                            )}
+                        </div>
                     </div>
                 </div>
 
