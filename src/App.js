@@ -29,23 +29,45 @@ function App() {
                 <ScrollToTop />
                 <Navbar />
                 <div>
-                    <div style={{ fontSize: "3rem" }}>{cash}</div>
+                    <div
+                        style={{
+                            fontSize: "3rem",
+                            marginLeft: "10.4rem",
+                            marginTop: "1rem",
+                        }}
+                    >
+                        {cash}
+                    </div>
                     <div style={{ display: "flex" }}>
                         <button
+                            style={{
+                                padding: "1rem",
+                                margin: "1rem",
+                                borderRadius: 5,
+                                background: "#5c62ec",
+                            }}
                             onClick={() => {
                                 addCash(Number(prompt()));
                             }}
                         >
-                            {" "}
-                            Пополнить счёт{" "}
+                            <div style={{ color: "#ffffff" }}>
+                                Пополнить счёт
+                            </div>
                         </button>
                         <button
+                            style={{
+                                padding: "1rem",
+                                margin: "1rem",
+                                borderRadius: 5,
+                                background: "#5c62ec",
+                            }}
                             onClick={() => {
                                 getCash(prompt());
                             }}
                         >
-                            {" "}
-                            Снять со счёта{" "}
+                            <div style={{ color: "#ffffff" }}>
+                                Снять со счёта
+                            </div>
                         </button>
                     </div>
                 </div>
