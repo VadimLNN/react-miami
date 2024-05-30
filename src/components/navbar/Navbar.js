@@ -47,6 +47,16 @@ function Navbar() {
                                 Contacts
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink
+                                to="/redux"
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : normalLink
+                                }
+                            >
+                                ForRedux
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
