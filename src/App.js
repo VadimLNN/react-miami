@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import Project from "./pages/Project";
 import ForRedux from "./pages/ForRedux";
+import MuiPage from "./pages/mui_page";
 
 import ScrollToTop from "./utils/scrollToTop";
 
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/project/:id" element={<Project />} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/redux" element={<ForRedux />} />
+                    <Route path="/mui_components" element={<MuiPage />} />
                 </Routes>
 
                 <Footer />
