@@ -57,6 +57,16 @@ function Navbar() {
                                 ForRedux
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink
+                                to="/mui_components"
+                                className={({ isActive }) =>
+                                    isActive ? activeLink : normalLink
+                                }
+                            >
+                                Mui
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
