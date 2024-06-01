@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addCustomerAction, remuveCustomerAction } from "../store/customerReduser";
 import { addCashAction, getCashAction } from "../store/cashReduser";
+import { fetchCustomers } from "../asyncActions/customers";
 
 const ForRedux = () => {
     const dispatch = useDispatch();
@@ -69,6 +70,15 @@ const ForRedux = () => {
                     }}
                 >
                     <div style={{ color: "#ffffff" }}>Добавить клиента</div>
+                </button>
+                <button
+                    style={{ margin: "5px" }}
+                    className="btn"
+                    onClick={() => {
+                        dispatch(fetchCustomers());
+                    }}
+                >
+                    <div style={{ color: "#ffffff" }}>Получить клиентов из базы</div>
                 </button>
 
                 <div style={{ margin: "5px" }}>
