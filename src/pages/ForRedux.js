@@ -1,8 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-    addCustomerAction,
-    remuveCustomerAction,
-} from "../store/customerReduser";
+import { addCustomerAction, remuveCustomerAction } from "../store/customerReduser";
 import { addCashAction, getCashAction } from "../store/cashReduser";
 
 const ForRedux = () => {

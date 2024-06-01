@@ -1,10 +1,16 @@
-import ButtonUsage from "../components/mui_components/mui_button";
+import ButtonUsage from "../components/mui_components/ButtonUsage";
+import OutlinedBasic from "../components/mui_components/OutlinedBasic";
 
 const MuiPage = () => {
     return (
-        <main style={{ margin: "2erm", padding: "1erm" }}>
-            <div>{ButtonUsage("HELLO")}</div>
-            <div>{ButtonUsage("HELLO")}</div>
+        <main className="section">
+            <div className="container">
+                <h2 className="title-1">Components</h2>
+                <ul className="projects">
+                    <div>{ButtonUsage("HELLO")}</div>
+                    <div>{OutlinedBasic()}</div>
+                </ul>
+            </div>
         </main>
     );
 };
