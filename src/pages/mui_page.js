@@ -7,8 +7,14 @@ const MuiPage = () => {
             <div className="container">
                 <h2 className="title-1">Components</h2>
                 <ul className="projects">
-                    <div>{ButtonUsage("HELLO")}</div>
-                    <div>{OutlinedBasic()}</div>
+                    <div className="section">
+                        <div className="container"> {ButtonUsage("HELLO")} </div>
+                    </div>
+                </ul>
+                <ul className="projects">
+                    <div className="section">
+                        <div className="container"> {OutlinedBasic()} </div>
+                    </div>
                 </ul>
             </div>
         </main>
