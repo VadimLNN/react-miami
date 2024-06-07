@@ -18,53 +18,33 @@ function Navbar() {
 
                     <ul className="nav-list">
                         <li className="nav-list__item">
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : normalLink
-                                }
-                            >
+                            <NavLink to="/" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-list__item">
-                            <NavLink
-                                to="/projects"
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : normalLink
-                                }
-                            >
+                            <NavLink to="/projects" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 Projects
                             </NavLink>
                         </li>
                         <li className="nav-list__item">
-                            <NavLink
-                                to="/contacts"
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : normalLink
-                                }
-                            >
+                            <NavLink to="/contacts" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 Contacts
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/redux"
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : normalLink
-                                }
-                            >
+                            <NavLink to="/redux" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 ForRedux
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/mui_components"
-                                className={({ isActive }) =>
-                                    isActive ? activeLink : normalLink
-                                }
-                            >
+                            <NavLink to="/mui_components" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 Mui
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/reduxToolkit" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
+                                ReduxTK
                             </NavLink>
                         </li>
                     </ul>
