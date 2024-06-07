@@ -39,14 +39,14 @@ function Navbar() {
                         </li>
                         <li>
                             <NavLink to="/mui_components" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
-                                Mui
+                                MuiReduxTK
                             </NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <NavLink to="/reduxToolkit" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                                 ReduxTK
                             </NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
